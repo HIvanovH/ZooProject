@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+    <Page Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pictures\Lion_waiting_in_Namibia.jpg" />
+    <None Remove="Pictures\Orel.jpg" />
+    <None Remove="Pictures\Usoinica.jpg" />
+    <None Remove="Pictures\zoo2.jpg" />
+    <None Remove="Pictures\zoo3.jpg" />
+    <None Remove="Pictures\zoo5.jpg" />
+    <None Remove="Pictures\zoo8.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="20.2.0.39" />
+    <PackageReference Include="Syncfusion.Tools.WPF.Classic" Version="19.4.0.56" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\Lion_waiting_in_Namibia.jpg" />
+    <Resource Include="Pictures\Orel.jpg" />
+    <Resource Include="Pictures\Usoinica.jpg" />
+    <Resource Include="Pictures\zoo2.jpg" />
+    <Resource Include="Pictures\zoo3.jpg" />
+    <Resource Include="Pictures\zoo5.jpg" />
+    <Resource Include="Pictures\zoo8.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
